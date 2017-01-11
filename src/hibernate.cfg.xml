@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *   Document   : Administrativo para Farmácia
+ *   Created on : 20/12/2016, 00:30:02
+ *   Descriçao  : Administração do caixa da emrpesa e do estoque.
+ *   Author     : Jose Walter (Bacharel em Ciencias da Computaçao)
+-->
+
+  <!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+   <hibernate-configuration>
+           
+	 <session-factory>
+	
+	    <!--  Configurações de conexão --> 
+	 
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/AdministracaoFarmacia</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">conhecimento2017</property>
+		
+		<!-- pool de conexão JDBC -->
+		
+		<property name="connection.pool-size">1</property>
+		
+		<!-- Dialeto do SQL -->		
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect	</property>
+		
+		<!-- Gerenciamento de Sessão -->
+		<property name="current_session_context_class">thread</property>
+		
+		<!-- Desabilita cache -->
+		<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+		
+		<!-- Exibe os comandos SQL -->
+		<property name="hibernate.show_sql">true</property>
+				
+		<!-- Cria as tabelas -->
+		<property name="hbm2ddl.auto">create</property>
+		
+		<!-- Mapeamento das calsses -->
+		<mapping class = "br.com.administracaofarmacia.domain.Fabricante"/>
+		<mapping class = "br.com.administracaofarmacia.domain.Funcionrio"/>
+		<mapping class = "br.com.administracaofarmacia.domain.Produto"/>
+		<mapping class = "br.com.administracaofarmacia.domain.Venda"/>
+		<mapping class = "br.com.administracaofarmacia.domain.Item"/>
+	</session-factory>
+ </hibernate-configuration>
