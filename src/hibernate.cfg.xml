@@ -19,7 +19,7 @@
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/AdministracaoFarmacia</property>
 		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password">conhecimento2017</property>
+		<property name="hibernate.connection.password">********</property>
 		
 		<!-- pool de conexão JDBC -->
 		
